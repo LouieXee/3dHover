@@ -2,3 +2,8 @@
 !PRODUCTION && require("../index.html")
 require("./index.less")
 
+import ThreeHover from "./ThreeHover";
+
+let div = document.querySelector(".test--wrapper");
+
+let threeHover = new ThreeHover(div);
