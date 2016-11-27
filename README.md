@@ -24,7 +24,7 @@ npm start
 new ThreeHover(document.querySelector(".test--wrapper"));
 ```
 
-### ThreeHover
+### API
 
 ``` js
 /* 
