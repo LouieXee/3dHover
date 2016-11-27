@@ -19,7 +19,7 @@ gulp.task("pack", ["clean"], function(done){
 })
 
 gulp.task("build", ["pack"], function(){
-	gulp.src("./dist/bundle.js")
+	gulp.src("./dist/ThreeHover.js")
 	.pipe(uglify({
 		compress: { screw_ie8: false },
 		mangle: { screw_ie8: false },

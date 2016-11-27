@@ -6,7 +6,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		publicPath: "/assets/",
-		filename: "bundle.js"
+		filename: "ThreeHover.js"
 	},
 	module: {
 		loaders: [
@@ -18,7 +18,7 @@ module.exports = {
 			{
 				test: /\.less$/,
 				exclude: /node_modules/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader", "autoprefixer-loader?browsers=last 2 version")
+				loader: "style-loader!css-loader!less-loader!autoprefixer-loader?browsers=last 2 version"
 			},
 			{
 		        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
@@ -33,7 +33,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin("bundle.css"),
 		new webpack.ProvidePlugin({
 			"$": "jquery"
 		})
