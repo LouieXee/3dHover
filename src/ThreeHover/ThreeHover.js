@@ -14,6 +14,8 @@ export default class ThreeHover{
 		this.perspective = opt.perspective || 800;
 		this.rangeX = opt.rangeX || [-15, 15];
 		this.rangeY = opt.rangeY || [-15, 15];
+		this.invertX = (Utils.isBoolean(opt.invertX) ? opt.invertX : false) ? -1 : 1;
+		this.invertY = (Utils.isBoolean(opt.invertY) ? opt.invertY : false) ? -1 : 1;
 
 		this.wrapper = this.ele.querySelector(".three--wrapper");
 		this.ele.style[PERSPECTIVE_NAME] = this.perspective + "px";
@@ -38,7 +40,7 @@ export default class ThreeHover{
 	}
 
 	__updateTransform(angleX, angleY){
-		this.wrapper.style[TRANSFORM_NAME] = "rotateX(" + angleX + "deg) rotateY(" + angleY + "deg)"
+		this.wrapper.style[TRANSFORM_NAME] = "rotateX(" + (this.invertY * angleX) + "deg) rotateY(" + (this.invertX * angleY) + "deg)"
 	}
 
 	__calculateAngle(winDelta, winPoint, angleRange){

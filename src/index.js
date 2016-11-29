@@ -6,4 +6,6 @@ import ThreeHover from "./ThreeHover";
 
 let div = document.querySelector(".test--wrapper");
 
-let threeHover = new ThreeHover(div);
+let threeHover = new ThreeHover(div, {
+	invertX: true
+});

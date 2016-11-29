@@ -16,6 +16,10 @@ const Utils = {
 
 	PERSPECTIVE_NAME: _getPropertyName(["perspective", "webkitPerspective"]),
 
+	isBoolean(target){
+		return Object.prototype.toString.call(target) === "[object Boolean]";
+	},
+
 	bind(ele, eventName, callback){
 		if(!ele.addEventListener) return false;
 
