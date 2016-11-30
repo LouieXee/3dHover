@@ -33,7 +33,7 @@ export default class ThreeHover{
 
 		for(let i=0,l=items.length; i<l; i++){
 			let item = items[i];
-			let depth = item.dataset.depth;
+			let depth = item.dataset && item.dataset.depth;
 			item.style.transform = "translate3d(0, 0, -" + depth + "px)";
 		}
 
