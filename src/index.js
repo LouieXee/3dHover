@@ -2,12 +2,23 @@
 !PRODUCTION && require("../index.html")
 require("./index.less")
 
+import Utils from "./Utils";
 import ThreeHover from "./ThreeHover";
 
 let div = document.querySelector(".test--wrapper");
+let flag = false;
 
-console.log(div.screenLeft)
+Utils.bind(document, "mousemove", function(){
+	console.log("aa");
+})
 
 let threeHover = new ThreeHover(div, {
-	invertX: true
+	invertX: true,
+	origin: "50% 50% 100px"
 });
+
+threeHover.on();
+threeHover.on();
+threeHover.on();
+threeHover.off();
+threeHover.on();

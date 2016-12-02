@@ -16,14 +16,26 @@ const Utils = {
 
 	PERSPECTIVE_NAME: _getPropertyName(["perspective", "webkitPerspective"]),
 
+	ORIGIN_NAME: _getPropertyName(["transformOrigin", "webkitTransformOrigin"]),
+
 	isBoolean(target){
 		return Object.prototype.toString.call(target) === "[object Boolean]";
+	},
+
+	isFunction(target){
+		return Object.prototype.toString.call(target) === "[object Function]";
 	},
 
 	bind(ele, eventName, callback){
 		if(!ele.addEventListener) return false;
 
 		ele.addEventListener(eventName, callback);
+	},
+
+	off(ele, eventName, callback){
+		if(!ele.removeEventListener) return false;
+
+		ele.removeEventListener(eventName, callback);
 	},
 
 	getWindowSize(){
