@@ -38,7 +38,6 @@ export default class ThreeHover{
 	on(){
 		if(this.__bindFlag) return false;
 
-		console.log("on")
 		this.__bind();
 	}
 
