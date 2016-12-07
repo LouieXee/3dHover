@@ -34,8 +34,25 @@ new ThreeHover(document.querySelector(".test--wrapper"));
 @param {Number} opt.perspective 指定视距
 @param {Array} opt.rangeX 旋转目标绕X轴旋转的区间
 @param {Array} opt.rangeY 旋转目标绕Y轴旋转的区间
+@param {Boolean} opt.invertX x轴方向逆转
+@param {Boolean} opt.invertY y轴方向逆转
+@param {String} opt.origin transform-origin属性设置
 */
 
 new ThreeHover(ele[, opt]);
 
+```
+
+``` js
+/* 
+绑定事件
+@method on
+*/
+```
+
+``` js
+/* 
+移除事件
+@method off
+*/
 ```
